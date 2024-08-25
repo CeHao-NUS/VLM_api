@@ -1,0 +1,108 @@
+==== Work 1 ====
+
+1. From what view are these [multi-view images]?
+   - The first image is from the front view.
+   - The second image is from the top view.
+
+2. Where is the origin of (0,0) and (1,1)?
+   - In the front view, the origin (0,0) is at the bottom left corner, and (1,1) is at the upper right corner.
+   - In the top view, the origin (0,0) is at the bottom left corner, and (1,1) is at the upper right corner.
+
+3. What are the directions of (x,y,z)?
+   - In the front view:
+     - x-axis points to the right.
+     - y-axis points inside (into the table).
+     - z-axis points up.
+   - In the top view:
+     - x-axis points to the right.
+     - y-axis points up.
+     - z-axis points outside (out of the table).
+
+4. In one image, what do points to right, and points to up represent?
+   - In the front view:
+     - Points to the right represent the x-axis.
+     - Points to up represent the z-axis.
+   - In the top view:
+     - Points to the right represent the x-axis.
+     - Points to up represent the y-axis.
+
+5. What is the bounding box (4 corner points) of the target object in each view?
+   - In the front view:
+     - Bottom left corner: (0.4, 0.3)
+     - Bottom right corner: (0.6, 0.3)
+     - Top left corner: (0.4, 0.6)
+     - Top right corner: (0.6, 0.6)
+   - In the top view:
+     - Bottom left corner: (0.4, 0.4)
+     - Bottom right corner: (0.6, 0.4)
+     - Top left corner: (0.4, 0.6)
+     - Top right corner: (0.6, 0.6)
+
+Note: The bounding box coordinates are approximate and based on visual estimation from the images provided.
+==== Work 2 ====
+
+**Key Steps to Finish the Task:**
+
+1. **Identify the Target Object:**
+   - The target object is the purple mug located near the center of the table.
+
+2. **Position the Robot:**
+   - Move the robot arm to a position above the mug, ensuring it is aligned with the mug's handle for a secure grasp.
+
+3. **Adjust the Gripper:**
+   - Open the gripper to a width slightly larger than the mug's handle.
+
+4. **Lower the Gripper:**
+   - Slowly lower the gripper towards the mug's handle, ensuring it is centered and aligned.
+
+5. **Grasp the Mug:**
+   - Close the gripper around the mug's handle, applying enough force to securely hold the mug without causing damage.
+
+6. **Lift the Mug:**
+   - Carefully lift the mug off the table, ensuring it is held steadily and does not tilt or spill.
+
+7. **Move to the Desired Location:**
+   - Transport the mug to the designated location as per the task requirements.
+
+8. **Release the Mug:**
+   - Gently open the gripper to release the mug at the desired location.
+
+**Grasping Point:**
+- The robot should grasp the mug by its handle. This provides a secure grip and minimizes the risk of the mug slipping or tilting during the lifting and moving process.
+
+By following these steps, the robot can successfully pick up the mug from the table and complete the task as described.
+==== Work 3 ====
+
+**Key Point Representation:**
+- The key point is the position on the mug's handle where the robot can securely grasp it. This point is chosen because the handle provides a secure grip and minimizes the risk of the mug slipping or tilting during the lifting and moving process.
+
+**Why Choose to Grasp Here:**
+- Grasping the mug by its handle ensures a stable and secure hold, allowing the robot to lift and transport the mug without spilling its contents or dropping it.
+
+**How This Key Point Satisfies the Task Description:**
+- By grasping the mug at the handle, the robot can effectively pick up the mug from the table and move it to the desired location, fulfilling the task requirements.
+
+**Marked Key Point in Multi-View Images:**
+
+- **Front View:**
+  - Position: (0.55, 0.45)
+  - The key point is marked on the handle of the mug.
+
+- **Top View:**
+  - Position: (0.55, 0.55)
+  - The key point is marked on the handle of the mug.
+
+**Overall Pose in 3D:**
+- Synthesizing the results from both views, the overall pose in 3D is:
+  - Position: (0.55, 0.55, 0.45)
+
+**Summary:**
+```
+{
+    "Front view": [0.55, 0.45], 
+    "Top view": [0.55, 0.55], 
+    "Overall pose in 3D": [0.55, 0.55, 0.45]
+}
+```
+
+By marking this key point, the robot can successfully grasp the mug by its handle and complete the task as described.
