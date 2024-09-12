@@ -1,0 +1,22 @@
+
+1. I give you a list of manipulation you can do:
+
+
+{
+    'mug': ['grasp on top', 'grasp the handle'],
+    'box': ['grasp left side', 'grasp right side', 'grasp on top']
+}
+
+
+2. According to the [question] and your last answer, please choose the correct action and output:
+
+For example, your answer is "I will pick the mug by the handle."
+
+Output:
+
+{'mug': 'grasp the handle'}
+
+
+3. If you do not need to do any manipulation, output: 
+
+None

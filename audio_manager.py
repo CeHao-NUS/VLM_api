@@ -5,11 +5,15 @@ pip install gtts pygame
 pip install SpeechRecognition
 
 '''
+import os
+os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 
 import pygame
 from gtts import gTTS
 import io
 import speech_recognition as sr
+import threading
+
 
 class AudioManager:
     def __init__(self, max_time=10):
@@ -64,9 +68,13 @@ class AudioManager:
         while pygame.mixer.music.get_busy():
             pygame.time.Clock().tick(self.max_time)
 
+    def speak_async(self, text):
+        # Run the speak method in a separate thread
+        threading.Thread(target=self.speak, args=(text,), daemon=True).start()
+
 if __name__ == "__main__":
     audio_manager = AudioManager()
-    audio_manager.speak("Hello, I am converting text to voice using Python and playing it directly!")
+    # audio_manager.speak("Hello, I am converting text to voice using Python and playing it directly!")
     # audio_manager.play("output.mp3")
     # audio_manager.record()
-    # audio_manager.listen()
+    audio_manager.listen()

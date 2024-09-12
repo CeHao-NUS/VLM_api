@@ -9,7 +9,8 @@ export OPENAI_API_KEY='yourkey'
 class OpenAICompletor:
     # user: question
     # assistant: answer
-    def __init__(self, api_key):
+    def __init__(self, api_key, model="gpt-4o-mini"):
+        self.model = model
         self.messages = []
         self.client = OpenAI(api_key=api_key)
 
@@ -50,7 +51,7 @@ class OpenAICompletor:
     def _get_completion(self):
         response = self.client.chat.completions.create(
         # model = 'gpt-3.5-turbo',
-        model = 'gpt-4',
+        model = self.model,
         messages = self.messages,
         temperature = 0,
         )
